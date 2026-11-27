@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy: #16324F;
+    --blue: #2F6690;
+    --teal: #3A7D8C;
+    --background: #EAF3F8;
+    --white: #FFFFFF;
+    --text: #263746;
+    --muted: #718096;
+    --border: #D8E4ED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+}
+
+.form-box {
+    width: 100%;
+    padding: 35px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(22,50,79,0.12);
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.form-box h2 {
+    color: var(--navy);
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    background: #F7FAFC;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--blue);
+    background: var(--white);
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: var(--blue);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 18px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--navy);
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+p a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover {
+    color: var(--teal);
+    text-decoration: underline;
+}
+
+.error-message {
+    padding: 12px;
+    background: #FDECEC;
+    border: 1px solid #F2CACA;
+    border-radius: 7px;
+    font-size: 14px;
+    color: #A42834;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    padding: 12px;
+    background: #E4F3EF;
+    border: 1px solid #B8DED2;
+    border-radius: 7px;
+    font-size: 14px;
+    color: #246B57;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 500px) {
+    .form-box {
+        padding: 25px 18px;
+    }
+
+    .form-box h2 {
+        font-size: 23px;
+    }
+}

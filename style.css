@@ -1,0 +1,306 @@
+
+/* BODY */
+body {
+    background-color: #EAF3F8;
+    color: #263746;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* GENERAL RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.welcome {
+    background-color: #16324F;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    grid-area: header;
+}
+
+.welcome h1 {
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.welcome p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 850px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    color: #16324F;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #2F6690;
+    padding: 13px;
+    grid-area: nav;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #16324F;
+    color: white;
+}
+
+/* MAIN */
+main {
+    padding: 25px;
+    grid-area: main;
+    min-width: 0;
+    background-color: #EAF3F8;
+}
+
+main h1, main h2, main h3 {
+    color: #16324F;
+}
+
+main p {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* PAGE LAYOUT */
+.page-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    gap: 0;
+    min-height: 100vh;
+}
+
+/* NAVIGATION LINKS */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 7px;
+}
+
+/* SIDEBAR */
+aside {
+    grid-area: aside;
+    background-color: white;
+    border-left: 1px solid #D8E4ED;
+    padding: 25px;
+    min-width: 0;
+}
+
+aside h2 {
+    color: #16324F;
+    font-size: 19px;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+/* CARDS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    min-width: 0;
+    background-color: white;
+    border: 1px solid #D8E4ED;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(22, 50, 79, 0.09);
+}
+
+.card h3 {
+    color: #16324F;
+}
+
+.card p {
+    color: #718096;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #2F6690;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+}
+
+.card a:hover {
+    background-color: #16324F;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+/* BUTTONS */
+button,
+.btn,
+input[type="submit"] {
+    background-color: #2F6690;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+    background-color: #16324F;
+}
+
+/* FORMS */
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 11px;
+    border: 1px solid #D8E4ED;
+    border-radius: 7px;
+    background-color: white;
+    color: #263746;
+    margin: 6px 0 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2F6690;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #16324F;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #D8E4ED;
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    background-color: #16324F;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #A9D6E5;
+    text-decoration: underline;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 700px) {
+    .page-layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    main,
+    aside {
+        min-width: 0;
+        padding: 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

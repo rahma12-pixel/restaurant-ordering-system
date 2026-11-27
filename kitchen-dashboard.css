@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy: #16324F;
+    --blue: #2F6690;
+    --teal: #3A7D8C;
+    --background: #EAF3F8;
+    --white: #FFFFFF;
+    --text: #263746;
+    --muted: #718096;
+    --border: #D8E4ED;
+    --shadow: 0 5px 18px rgba(22, 50, 79, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 25px 35px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #DCEAF3;
+    font-size: 14px;
+}
+
+/* Navigation */
+nav {
+    background: var(--white);
+    padding: 13px 25px;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: var(--navy);
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* Main content */
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+main h2 {
+    color: var(--navy);
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Order cards */
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--blue);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 23px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.card h4 {
+    color: var(--blue);
+    font-size: 15px;
+    margin: 20px 0 12px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card strong {
+    color: var(--text);
+}
+
+/* Order action buttons */
+button {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    padding: 11px 18px;
+    margin: 10px 8px 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--teal);
+}
+
+/* Empty orders message */
+main > p {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 10px;
+    color: var(--muted);
+}
+
+/* Footer */
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    color: var(--white);
+    font-size: 13px;
+}
+
+/* Mobile design */
+@media (max-width: 650px) {
+    header {
+        padding: 22px 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    main {
+        padding: 22px 14px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+}
